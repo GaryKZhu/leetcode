@@ -1,6 +1,6 @@
 numRow = 4
 s = "PAYPALISHIRING"
-numColumn = int(len(s) / 2)
+numColumn = len(s)
 row = [[' ' for x in range(numRow)] for y in range(numColumn)]
 sequencerow = 1
 sequencecolumn = 0
@@ -17,5 +17,15 @@ for x in s:
     indexrow = indexrow + sequencerow
     indexcolumn = indexcolumn + sequencecolumn
 
+for i in row:
+    if i==[' ']:
+       row.remove(i)
+
+rotated = list(zip(*(row)))
+
 for list in row:
     print('  '.join(list))
+    
+for list in rotated:
+    print('  '.join(list))
+
